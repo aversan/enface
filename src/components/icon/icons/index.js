@@ -10,6 +10,8 @@ import IconUpload from './icon-upload';
 import IconQuest from './icon-quest';
 import IconClose from './icon-close';
 import IconHamburger from './icon-hamburger';
+import IconVipPerson from './icon-vipperson';
+import IconPeoples from './icon-peoples';
 
 export {
   IconInstagram,
@@ -23,5 +25,7 @@ export {
   IconUpload,
   IconQuest,
   IconClose,
+  IconVipPerson,
+  IconPeoples,
   IconHamburger
 };

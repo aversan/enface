@@ -30,7 +30,9 @@ const Scroller = ({ direction, children, className }) => {
       direction={direction}
       slidesPerView="auto"
       freeMode
-      scrollbar
+      scrollbar={{
+        draggable: true,
+      }}
       mousewheel
       // wrapperClasses={wrapperClasses}
       className={componentClasses}

@@ -14,6 +14,8 @@ import {
   IconUpload,
   IconQuest,
   IconClose,
+  IconVipPerson,
+  IconPeoples,
   IconHamburger
 } from './icons/index';
 
@@ -21,7 +23,7 @@ const icons = {
   upload: IconUpload,
   quest: IconQuest,
   close: IconClose,
-  hamburger: IconHamburger
+  hamburger: IconHamburger,
 };
 
 const socialIcons = {
@@ -32,6 +34,8 @@ const socialIcons = {
   tiktok: IconTiktok,
   wiki: IconWiki,
   kinopoisk: IconKinopoisk,
+  vipperson: IconVipPerson,
+  peoples: IconPeoples,
 };
 
 const flagIcons = {

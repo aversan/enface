@@ -27,13 +27,14 @@
   }
 
   .avatar-quest {
+    --avatar-quest-size: .7875rem;
     position: absolute;
-    bottom: .3125rem;
-    right: .25rem;
+    bottom: .3375rem;
+    right: .225rem;
     cursor: pointer;
     fill: currentColor;
-    width: .75rem;
-    height: .75rem;
+    width: var(--avatar-quest-size);
+    height: var(--avatar-quest-size);
     color: var(--white);
   }
 
@@ -41,6 +42,7 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .name {

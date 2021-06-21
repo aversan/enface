@@ -18,7 +18,7 @@ const PersonCard = ({ className, avatar, quest, name, socials }) => {
       <div className={styles.content}>
         {
           name && (
-            <div className={classNames(styles.name, 'claim-line-1')}>
+            <div className={classNames(styles.name, 'text-truncate')}>
               {name}
             </div>
           )

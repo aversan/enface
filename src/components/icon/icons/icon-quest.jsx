@@ -10,7 +10,7 @@ const IconQuest = ({ className }) => (
     viewBox="0 0 24 24"
     className={className}
   >
-    <circle cx="12" cy="12" r="10" fill="#2c2c3b" />
+    <circle cx="12" cy="12" r="10" fill="#393775" />
     <path
       fill="#fff"
       fillRule="evenodd"

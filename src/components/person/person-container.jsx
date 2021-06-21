@@ -8,6 +8,8 @@ import Empty from 'components/empty/empty';
 import Scroller from 'components/scroller/scroller';
 import Dropzone from 'components/dropzone/dropzone';
 import Title from 'components/title/title';
+import avatarImage from 'assets/images/avatar.jpeg';
+import mainImage from 'assets/images/image.jpeg';
 import PersonList from './person-list';
 import PersonImage from './person-image';
 import PersonThumbList from './person-thumb-list';
@@ -23,7 +25,7 @@ const PersonContainer = ({ className, uploadStatus, searchStatus }) => {
   const thumbs = [
     {
       id: nanoid(),
-      src: 'https://via.placeholder.com/112',
+      src: avatarImage,
     },
     {
       id: nanoid(),
@@ -80,14 +82,14 @@ const PersonContainer = ({ className, uploadStatus, searchStatus }) => {
     {
       id: nanoid(),
       src: 'https://via.placeholder.com/112',
-    }
+    },
   ]
 
   const persons = [
     {
       id: nanoid(),
-      avatar: 'https://via.placeholder.com/72',
-      name: 'Leonardo DiCaprio asdadsasdasd asd asd dsa',
+      avatar: avatarImage,
+      name: 'Leonardo DiCaprioDiCaprioDiCaprio',
       link: '',
       quest: 'ok',
       socials: [
@@ -113,7 +115,9 @@ const PersonContainer = ({ className, uploadStatus, searchStatus }) => {
         { name: 'twitter', link: '', id: nanoid() },
         { name: 'tiktok', link: '', id: nanoid() },
         { name: 'wiki', link: '', id: nanoid() },
-        { name: 'kinopoisk', link: '', id: nanoid() }
+        { name: 'kinopoisk', link: '', id: nanoid() },
+        { name: 'vipperson', link: '', id: nanoid() },
+        { name: 'peoples', link: '', id: nanoid() }
       ],
     },
     {
@@ -189,12 +193,12 @@ const PersonContainer = ({ className, uploadStatus, searchStatus }) => {
           <section className={styles.section}>
             {
               uploadStatus === 'uploaded' && (
-                <PersonImage className={styles.image} src="https://via.placeholder.com/760x358" />
+                <PersonImage className={styles.image} src={mainImage} />
               )
             }
             {
               uploadStatus === 'uploaded-without-face' && (
-                <PersonImage className={styles.image} src="https://via.placeholder.com/760x358" />
+                <PersonImage className={styles.image} src={mainImage} />
               )
             }
             {
