@@ -34,6 +34,8 @@
   .close-link {
     flex-shrink: 0;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 
   .close-link {
@@ -63,6 +65,8 @@
   }
 
   .lang-link {
+    background-color: transparent;
+    border: none;
     @include text-truncate();
     font-size: .625rem;
     line-height: 1.2;

@@ -14,15 +14,15 @@ const TopPanel = ({ className, ...props }) => {
       <div className={containerClasses} {...props}>
         <div className={styles.wrapper}>
           <div className={styles.navigation}>
-            <Link
-              to="#"
+            <button
+              type="button"
               className={styles['navigation-link']}
             >
               <Icon name="uk" variant="flag" className={styles.icon} />
               En
-            </Link>
+            </button>
             <Link
-              to="#"
+              to="/login"
               className={styles['navigation-link']}
             >
               Login

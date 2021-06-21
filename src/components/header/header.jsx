@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import Logo from 'components/logo/logo';
 import Icon from 'components/icon/icon';
 import Button from 'components/button/button';
-import { Desktop, TabletOrMobile } from 'components/mq'
+import { TabletOrMobile } from 'components/mq'
 import styles from './header.module.scss';
 
 const Header = ({ className, ...props }) => {
@@ -20,17 +20,17 @@ const Header = ({ className, ...props }) => {
     {
       id: nanoid(),
       text: 'Platform',
-      link: '',
+      link: '/',
     },
     {
       id: nanoid(),
       text: 'About',
-      link: '',
+      link: '/',
     },
     {
       id: nanoid(),
       text: 'Contacts',
-      link: '',
+      link: '/',
     }
   ]
 
@@ -39,30 +39,28 @@ const Header = ({ className, ...props }) => {
       <div className={styles.wrapper}>
         <Logo className={styles.logo} />
         <TabletOrMobile>
-          <Link className={classNames(styles['lang-link'])}
-            to="#"
-          >
+          <button type="button" className={classNames(styles['lang-link'])}>
             <Icon name="uk" variant="flag" className={styles['lang-icon']} />
             En
-          </Link>
-          <Link className={classNames(styles['hamburger-link'])} onClick={() => setOpen(true)}>
+          </button>
+          <button type="button" className={classNames(styles['hamburger-link'])} onClick={() => setOpen(true)}>
             <Icon name="hamburger" className={styles.hamburger} />
-          </Link>
-          <Link className={classNames(styles['close-link'])} onClick={() => setOpen(false)}>
+          </button>
+          <button type="button" className={classNames(styles['close-link'])} onClick={() => setOpen(false)}>
             <Icon name="close" className={styles.close} />
-          </Link>
+          </button>
         </TabletOrMobile>
         <div className={styles['navigation-wrapper']}>
           <nav className={styles.navigation}>
             {
               items.map(({ id, text, link }) => (
-                <a
+                <Link
                   key={id}
-                  href={link}
+                  to={link}
                   className={styles['navigation-link']}
                 >
                   {text}
-                </a>
+                </Link>
               ))
             }
           </nav>

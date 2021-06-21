@@ -27,6 +27,8 @@
   }
 
   .navigation-link {
+    background-color: transparent;
+    border: none;
     @include text-truncate();
     font-size: .625rem;
     line-height: 1.2;

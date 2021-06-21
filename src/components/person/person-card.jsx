@@ -6,7 +6,7 @@ import Avatar from 'components/avatar/avatar';
 import Icon from 'components/icon/icon';
 import styles from './person-card.module.scss';
 
-const PersonCard = ({ className, avatar, quest, name, link, socials }) => {
+const PersonCard = ({ className, avatar, quest, name, socials }) => {
   const componentClasses = classNames(styles.container, className);
 
   return (
@@ -48,7 +48,6 @@ PersonCard.propTypes = {
   avatar: PropTypes.string,
   quest: PropTypes.string,
   name: PropTypes.string,
-  link: PropTypes.string,
   socials: PropTypes.arrayOf(PropTypes.object),
 };
 
@@ -57,6 +56,5 @@ PersonCard.defaultProps = {
   avatar: '',
   quest: '',
   name: '',
-  link: '',
   socials: [],
 };
