@@ -1,0 +1,177 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  height: var(--header-height);
+  display: flex;
+  position: sticky;
+  z-index: 1111;
+
+  @include media-mobile {
+    height: var(--header-height-mobile);
+  }
+
+  &.is-open {
+    @include media-mobile {
+      background-color: var(--blue-dark);
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    @include make-container();
+  }
+
+  &.is-open .logo {
+    @include media-mobile {
+      display: none;
+    }
+  }
+
+  .hamburger-link,
+  .close-link {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .close-link {
+    display: none;
+  }
+
+  &.is-open .close-link {
+    display: inline;
+  }
+
+  .hamburger-link {
+    display: inline;
+  }
+
+  &.is-open .hamburger-link {
+    display: none;
+  }
+
+  .close {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .hamburger {
+    width: 1.1875rem;
+    height: 1.1875rem;
+  }
+
+  .lang-link {
+    @include text-truncate();
+    font-size: .625rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white-74);
+
+    .lang-icon {
+      margin-right: .375rem;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--white);
+    }
+  }
+
+  .lang-link {
+    display: none;
+  }
+
+  &.is-open .lang-link {
+    display: inline;
+  }
+
+  .navigation-wrapper {
+    @include media-mobile {
+      position: absolute;
+      left: 0;
+      top: var(--header-height-mobile);
+      width: 100%;
+      height: calc(100vh - var(--header-height-mobile));
+      background-color: var(--blue-dark);
+      z-index: 11111;
+      overflow-y: auto;
+      //transition: visibility 0s .2s,opacity .2s linear;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      visibility: hidden;
+    }
+  }
+
+  &.is-open .navigation-wrapper {
+    @include media-mobile {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .2s linear;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    @include media-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > * + * {
+      --space-y-reverse: 0;
+      margin-left: calc(1.5rem * calc(1 - var(--space-y-reverse)));
+      margin-right: calc(1.5rem * var(--space-y-reverse));
+
+      @include media-mobile {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .navigation-link {
+    @include text-truncate();
+    font-size: .75rem;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+
+    @include media-mobile {
+      height: 3.5rem;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--white-84);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    &:hover,
+    &:focus {
+      color: var(--link-hover);
+    }
+  }
+
+  .button {
+    @include media-mobile {
+      min-width: 10.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+    }
+  }
+}

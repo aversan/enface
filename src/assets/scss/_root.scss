@@ -1,0 +1,27 @@
+:root {
+  --body-bg: linear-gradient(45deg, rgba(4,4,4,1) 0%, rgba(39,34,162,1) 100%);
+  --header-height: 7.25rem;
+  --header-height-mobile: 3.75rem;
+  --footer-height: 7.375rem;
+  --primary-light: #62B8FF;
+  --primary: #37a4ff;
+  --primary-dark: #1193ff;
+  --black: #040404;
+  --blue-dark: #10054C;
+  --white: #fff;
+  --white-03: rgba(255, 255, 255, .03);
+  --white-05: rgba(255, 255, 255, .05);
+  --white-07: rgba(255, 255, 255, .07);
+  --white-10: rgba(255, 255, 255, .1);
+  --white-15: rgba(255, 255, 255, .15);
+  --white-20: rgba(255, 255, 255, .20);
+  --white-25: rgba(255, 255, 255, .25);
+  --white-40: rgba(255, 255, 255, .4);
+  --white-60: rgba(255, 255, 255, .6);
+  --white-74: rgba(255, 255, 255, .74);
+  --white-84: rgba(255, 255, 255, .84);
+  --link-hover: var(--primary);
+  --border-radius: .625rem;
+  --container-padding-x: 1.5rem;
+  --container-padding-x-mobile: 1rem;
+}

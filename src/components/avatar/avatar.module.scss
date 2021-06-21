@@ -1,0 +1,30 @@
+@import "src/assets/scss/mixins";
+
+.avatar {
+  --avatar-size: 4.5rem;
+  --avatar-size-md: 4.5rem;
+
+  display: inline-flex;
+  flex-shrink: 0;
+  object-fit: cover;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+
+  @include media-mobile {
+    --avatar-size: 3.5rem;
+    --avatar-size-md: 3.5rem;
+  }
+
+  &.avatar-medium {
+    width: var(--avatar-size-md);
+    height: var(--avatar-size-md);
+  }
+
+  &.avatar-square {
+    border-radius: var(--border-radius);
+  }
+
+  &.avatar-circle {
+    border-radius: 100rem;
+  }
+}

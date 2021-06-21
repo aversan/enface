@@ -1,0 +1,29 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 12.5rem;
+
+    @include media-mobile {
+      max-width: 11rem;
+    }
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    background-color: var(--white-10);
+    color: var(--white-40);
+
+    @include media-mobile {
+      font-size: .875rem;
+    }
+  }
+}

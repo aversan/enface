@@ -1,0 +1,28 @@
+.text-md {
+  --font-size: 1rem;
+  --line-height: 1.5;
+
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.text-md {
+  --font-size: 1rem;
+}
+
+.clamp-line-1,
+.clamp-line-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines);
+  -webkit-box-orient: vertical;
+  max-height: calc(var(--font-size) * var(--line-height) * var(--max-lines));
+  overflow: hidden;
+}
+
+.clamp-line-1 {
+  --max-lines: 1;
+}
+
+.clamp-line-2 {
+  --max-lines: 2;
+}

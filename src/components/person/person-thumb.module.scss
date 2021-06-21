@@ -1,0 +1,57 @@
+@import "src/assets/scss/mixins";
+
+.thumb-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius);
+  }
+
+  &:hover::before {
+    border: 3px solid var(--primary);
+
+    @include media-mobile {
+      border-width: 2px;
+    }
+  }
+
+  &.active::before,
+  &.active:hover::before {
+    border: 3px solid var(--primary);
+
+    @include media-mobile {
+      border-width: 2px;
+    }
+  }
+
+  .thumb {
+    --person-thumb-width: 7rem;
+    --person-thumb-height: 6.5625rem;
+
+    @include media-mobile {
+      --person-thumb-width: 4.8125rem;
+      --person-thumb-height: 4.8125rem;
+    }
+
+    display: inline-block;
+    flex-shrink: 0;
+    object-fit: cover;
+    width: var(--person-thumb-width);
+    height: var(--person-thumb-height);
+    border-radius: var(--border-radius);
+
+    &.thumb-empty {
+      background-color: var(--white-10);
+    }
+  }
+}

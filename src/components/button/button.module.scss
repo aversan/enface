@@ -1,0 +1,119 @@
+@import "src/assets/scss/mixins";
+
+.button {
+  --button-height: 3.125rem;
+  --button-icon-size: 1.25rem;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  height: var(--button-height);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+
+  .icon-wrapper {
+    margin-right: .625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    width: var(--button-icon-size);
+    height: var(--button-icon-size);
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  &.button-only-icon {
+    width: var(--button-height);
+    height: var(--button-height);
+    padding-left: 0;
+    padding-right: 0;
+    flex-shrink: 0;
+
+    .icon-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &.button-md {
+    --button-height: 3.125rem;
+    --button-icon-size: 1.25rem;
+
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  &.button-primary {
+    background-color: var(--primary);
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-dark);
+      color: var(--white);
+    }
+
+    &:active {
+      background-color: var(--primary-light);
+      color: var(--white);
+    }
+
+    &[disabled] {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+
+  &.button-outline-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: var(--white);
+      color: var(--white);
+    }
+
+    &[disabled] {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+
+  &.button-full {
+    width: 100%;
+  }
+}
+

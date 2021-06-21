@@ -1,0 +1,97 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: var(--border-radius);
+  background-color: var(--white-10);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    background-color: var(--white-25);
+  }
+
+  .avatar-wrapper {
+    margin-right: 1rem;
+    flex-shrink: 0;
+    position: relative;
+
+    @include media-mobile {
+      margin-right: .75rem;
+    }
+  }
+
+  .avatar-quest {
+    position: absolute;
+    bottom: .3125rem;
+    right: .25rem;
+    cursor: pointer;
+    fill: currentColor;
+    width: .75rem;
+    height: .75rem;
+    color: var(--white);
+  }
+
+  .content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    --font-size: 1rem;
+    --line-height: 1.25;
+
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-weight: 600;
+    color: var(--white);
+
+    @include media-mobile {
+      --font-size: .875rem;
+      --line-height: 1.28457;
+    }
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+    }
+  }
+
+  .social {
+    margin-top: .75rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    @include media-mobile {
+      margin-top: .625rem;
+    }
+
+    > * + * {
+      --space-y-reverse: 0;
+      margin-left: calc(.625rem * calc(1 - var(--space-y-reverse)));
+      margin-right: calc(.625rem * var(--space-y-reverse));
+
+      @include media-mobile {
+        margin-left: calc(.375rem * calc(1 - var(--space-y-reverse)));
+        margin-right: calc(.375rem * var(--space-y-reverse));
+      }
+    }
+  }
+
+  .social-icon {
+    position: relative;
+    z-index: 2;
+
+    @include media-mobile {
+      --icon-size: .75rem;
+    }
+  }
+}

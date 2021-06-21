@@ -1,0 +1,11 @@
+@import "src/assets/scss/mixins";
+
+.logo {
+  flex-shrink: 0;
+  height: 3.5rem;
+  width: auto;
+
+  @include media-mobile {
+    height: 2.5rem;
+  }
+}

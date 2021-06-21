@@ -1,0 +1,30 @@
+@import "src/assets/scss/mixins";
+
+.image-container {
+  position: relative;
+}
+
+.image {
+  --person-image-width: 100%;
+  --person-image-height: 22.375rem;
+
+  @include media-mobile {
+    --person-image-height: 10.625rem;
+  }
+
+  display: inline-flex;
+  vertical-align: top;
+  flex-shrink: 0;
+  object-fit: cover;
+  width: var(--person-image-width);
+  height: var(--person-image-height);
+  border-radius: var(--border-radius);
+}
+
+.image-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,77 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  --dropdown-area-width: 100%;
+  --dropdown-area-height: 22.375rem;
+
+  display: flex;
+  flex: 1 1 auto;
+
+  @include media-mobile {
+    --dropdown-area-height: 10.625rem;
+  }
+
+
+  .area {
+    border: 1px dashed var(--white-40);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--dropdown-area-height);
+    width: var(--dropdown-area-width);
+    background-color: var(--white-05);
+    flex: 1 1 auto;
+
+    @include media-mobile {
+      padding: 1rem;
+    }
+
+    &:hover {
+      background-color: var(--white-20);
+    }
+  }
+
+  .text {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--white-40);
+
+    @include media-mobile {
+      font-size: 1.25rem;
+    }
+  }
+
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--white);
+    margin-top: 1.5rem;
+
+    @include media-mobile {
+      font-size: 1.25rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--white-40);
+    margin-top: .125rem;
+
+    @include media-mobile {
+      font-size: 1.25rem;
+    }
+  }
+}

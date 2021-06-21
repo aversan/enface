@@ -1,0 +1,14 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  > * + * {
+    --space-y-reverse: 0;
+    margin-top: calc(.5rem * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(.5rem * var(--space-y-reverse));
+  }
+}

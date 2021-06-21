@@ -1,0 +1,39 @@
+.container {
+  overflow: hidden;
+
+  //.wrapper {
+  //  display: flex;
+  //  -webkit-overflow-scrolling: touch;
+  //}
+
+  &.horizontal {
+    width: 100%;
+
+    //.wrapper {
+    //  flex-direction: row;
+    //  overflow-x: auto;
+    //  //padding-bottom: 2rem;
+    //  width: 100%;
+    //  white-space: nowrap;
+    //}
+
+    .swiper-slide {
+      width: auto;
+    }
+  }
+
+  &.vertical {
+    height: 100%;
+
+    //.wrapper {
+    //  flex-direction: column;
+    //  overflow-y: auto;
+    //  //padding-right: 2rem;
+    //  height: 100%;
+    //}
+
+    .swiper-slide {
+      height: auto;
+    }
+  }
+}

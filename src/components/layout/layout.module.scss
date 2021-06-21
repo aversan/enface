@@ -1,0 +1,30 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  min-width: 0;
+
+  .main {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .wrapper {
+    @include make-container();
+  }
+}

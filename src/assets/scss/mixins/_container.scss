@@ -1,0 +1,13 @@
+@mixin make-container() {
+  width: 100%;
+  max-width: 1248px;
+  padding-right: var(--container-padding-x);
+  padding-left: var(--container-padding-x);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-mobile {
+    padding-right: var(--container-padding-x-mobile);
+    padding-left: var(--container-padding-x-mobile);
+  }
+}

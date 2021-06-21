@@ -1,0 +1,5 @@
+.layout.is-sidemenu .layout-content {
+  padding-left: var(--sidemenu-width); }
+
+.layout.is-submenu .layout-content {
+  padding-left: calc(var(--sidemenu-width) + var(--submenu-width)); }

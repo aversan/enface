@@ -1,0 +1,96 @@
+@import "src/assets/scss/mixins";
+
+.container {
+  --person-container-height: 594px;
+
+  @include media-mobile {
+    --person-container-height: auto;
+  }
+
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  .col-section,
+  .col-side {
+    display: flex;
+  }
+
+  .section,
+  .side {
+    background-color: var(--white-05);
+    border-radius: var(--border-radius);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: var(--person-container-height);
+  }
+
+  .section {
+    padding: 1rem;
+
+    @include media-mobile {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      padding-bottom: 0;
+    }
+
+    & > * + * {
+      --space-y-reverse: 0;
+      margin-top: calc(1rem * calc(1 - var(--space-y-reverse)));
+      margin-bottom: calc(1rem * var(--space-y-reverse));
+    }
+  }
+
+  .side {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include media-mobile {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .thumbs-scroller {
+    margin-left: -1rem;
+    width: calc(100% + 2rem);
+
+    @include media-mobile {
+      padding-bottom: 0;
+    }
+  }
+
+  .loading-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--white-40);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .button {
+    margin-top: 0;
+
+    @include media-mobile {
+      order: -1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .dropzone {
+  }
+
+  .side-scroller {
+    flex: 1 1 auto;
+    width: calc(100% + 1rem);
+
+
+    @include media-mobile {
+      padding-right: 1rem;
+    }
+  }
+}
